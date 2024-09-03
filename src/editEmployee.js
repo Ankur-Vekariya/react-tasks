@@ -5,20 +5,20 @@ export default function EditEmployee() {
   const { state } = useLocation();
 
   const [employeeDetail, setEmployeeDetail] = useState({
-    id: state.item.id ? state.item.id : "",
-    employeeName: state.item.employeeName ? state.item.employeeName : "",
-    email: state.item.email ? state.item.email : "",
-    mobileNumber: state.item.mobileNumber ? state.item.mobileNumber : "",
-    date: state.item.date ? state.item.date : "",
+    id: state?.item.id ? state?.item.id : "",
+    employeeName: state?.item.employeeName ? state?.item.employeeName : "",
+    email: state?.item.email ? state?.item.email : "",
+    mobileNumber: state?.item.mobileNumber ? state?.item.mobileNumber : "",
+    date: state?.item.date ? state?.item.date : "",
   });
 
   const onSave = async () => {
     let data = localStorage.getItem("employee");
     data = data && JSON.parse(data);
     let arr = data ? [...data] : [];
-    if (!!state.item.id) {
+    if (!!state?.item.id) {
       let updatedArr = arr.map((item) => {
-        if (item.id === state.item.id) {
+        if (item.id === state?.item.id) {
           return {
             ...item,
             employeeName: employeeDetail.employeeName,

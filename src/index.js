@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import EditEmployee from './editEmployee';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ArrayMethods from './arrayMethods';
+import Todo from './todo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -16,6 +18,14 @@ const router = createBrowserRouter([
   {
     path: "/edit-employee",
     element: <EditEmployee />,
+  },
+  {
+    path: "/array-methods",
+    element: <ArrayMethods />,
+  },
+  {
+    path: "/todo",
+    element: <Todo />,
   },
 ]);
 
