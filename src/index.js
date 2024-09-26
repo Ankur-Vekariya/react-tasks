@@ -1,14 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import EditEmployee from './editEmployee';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import ArrayMethods from './arrayMethods';
-import Todo from './todo';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import EditEmployee from "./editEmployee";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ArrayMethods from "./arrayMethods";
+import Todo from "./todo";
+import Form from "./form";
+import DynamicForm from "./dynamicForm";
+import Preview from "./preview";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const router = createBrowserRouter([
   {
@@ -27,11 +30,22 @@ const router = createBrowserRouter([
     path: "/todo",
     element: <Todo />,
   },
+  {
+    path: "/form",
+    element: <Form />,
+  },
+  {
+    path: "/dynamic-form",
+    element: <DynamicForm />,
+  },
+  {
+    path: "/preview",
+    element: <Preview />,
+  },
 ]);
 
 root.render(
   <React.StrictMode>
-    
     <RouterProvider router={router} />
   </React.StrictMode>
 );
