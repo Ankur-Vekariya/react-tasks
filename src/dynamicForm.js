@@ -14,13 +14,13 @@ function DynamicForm() {
     setDynamicForm([...dynamicForm, dataTemplet]);
   };
   const onChange = (e, parentIndex) => {
-    let updateData = dynamicForm.map((item, index) =>
-      index === parentIndex
+    let updateData = dynamicForm.map((item, index) => {
+      console.log(parentIndex, index);
+      return parentIndex === index
         ? Object.assign(item, { [e?.target?.name]: e?.target?.value })
-        : item
-    );
+        : item;
+    });
     setDynamicForm(updateData);
-    // console.log("updateData", updateData, e.target.value);
   };
   const onRemove = (parentIndex) => {
     let filteredData = [...dynamicForm];

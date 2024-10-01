@@ -10,6 +10,8 @@ import Todo from "./todo";
 import Form from "./form";
 import DynamicForm from "./dynamicForm";
 import Preview from "./preview";
+import Hoc from "./hoc";
+import Calculator from "./calc";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -41,6 +43,14 @@ const router = createBrowserRouter([
   {
     path: "/preview",
     element: <Preview />,
+  },
+  {
+    path: "/hoc",
+    element: <Hoc />,
+  },
+  {
+    path: "/calculator",
+    element: <Calculator />,
   },
 ]);
 
